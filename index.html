@@ -308,53 +308,7 @@
       transform: scale(1.05);
       cursor: pointer;
     }
-      .carousel{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:15px;
-  max-width:1200px;
-  margin:auto;
-}
-
-.carousel img{
-  width:100%;
-  max-width:900px;
-  height:500px;
-  object-fit:cover;
-  border-radius:15px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.2);
-}
-
-.carousel button{
-  background:#0b2cbf;
-  color:white;
-  border:none;
-  width:50px;
-  height:50px;
-  border-radius:50%;
-  font-size:24px;
-  cursor:pointer;
-  transition:.3s;
-}
-
-.carousel button:hover{
-  background:#2248ff;
-}
-
-@media(max-width:768px){
-
-  .carousel img{
-    height:250px;
-  }
-
-  .carousel button{
-    width:40px;
-    height:40px;
-    font-size:20px;
-  }
-
-}
+    }
   </style></head>
 <body>  <header>
     <div class="navbar"><div class="logo">
@@ -441,17 +395,6 @@
   </section>  <section class="galeria" id="galeria"><h2 class="titulo">Galeria</h2>
 
 <div class="galeria-grid">
-   <h2 class="titulo">Galeria</h2>
-
-  <div class="carousel">
-
-    <button class="prev">&#10094;</button>
-
-    <img id="imagemGaleria" src="img/foto1.jpg" alt="Galeria da escola">
-
-    <button class="next">&#10095;</button>
-
-  </div>
   <a href="img/ft1.jpg" target"_blank">
    <img src="img/ft1.jpg" alt="Imagem da escola">
   </a>
@@ -485,33 +428,6 @@
 </div>
 
 <p>© 2026 Escola Alonzo Barbuda - Todos os direitos reservados.</p>
-    
-<script>
-
-const imagens = [
-  "img/ft1.jpg",
-  "img/ft2.jpg",
-  "img/ft3.jpg",
-  "img/ft4.jpg",
-  "img/ft5.jpg",
-  "img/ft6.jpg"
-];
-
-let atual = 0;
-
-const img = document.getElementById("imagemGaleria");
-
-document.querySelector(".next").addEventListener("click", () => {
-  atual = (atual + 1) % imagens.length;
-  img.src = imagens[atual];
-});
-
-document.querySelector(".prev").addEventListener("click", () => {
-  atual = (atual - 1 + imagens.length) % imagens.length;
-  img.src = imagens[atual];
-});
-
-</script>
 
   </footer></body>
 </html>
